@@ -41,7 +41,8 @@ class Project(models.Model):
     title = models.TextField('Título', max_length=300, null=True, blank=True)
     datetime = models.DateTimeField('Fecha y hora', null=True, blank=True)
     resume = models.TextField('Resume', max_length=300, null=True, blank=True)
-    text = models.TextField('Texto', max_length=12000, null=True, blank=True)
+    #text = models.TextField('Texto', max_length=12000, null=True, blank=True)
+    text = RichTextField()
     image = models.ImageField('Image', null=True, blank=True, upload_to="img/")
 
     class Meta:

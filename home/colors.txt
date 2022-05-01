@@ -1,0 +1,8 @@
+Azul oscuro: #0A192F
+Azul medio: #112240
+Azul claro: #ccd6f6
+Verde oscuro: #1d4753
+Verde oscuro2: #153343
+Verde claro: #52c6b5
+Texto sobre azul: #586684
+Titulo sobre azul: #CCD6F6

@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}****** Iñaki Retegi{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+
+
+<style>
+    #map { height: 480px; }
+    body{
+        background-color: #0A192F;
+    }
+
+    #tocolor:hover{
+        filter: grayscale(0%);
+        
+    }
+    #tocolor{
+        filter: grayscale(100%);
+        
+    }
+
+
+     /* Style all font awesome icons */
+    
+    .fa {
+    padding: 10px;
+    font-size: 60px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    } 
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+    opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    }
+    /* Linkedin */
+    .fa-linkedin {
+    background: #3295C3;
+    color: white;
+    } 
+    /* Github */
+    .fa-github {
+    background: #fff;
+    color: white;
+    } 
+</style>
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-fluid m-5">
+    <div class="row m-5">
+        <div class="col-3 mt-5 mb-5"></div>
+
+        <div class="col-6 mt-3 mb-5">
+            <div class="row">
+
+                <div class="col-12 text-left mt-5 mb-5">
+                    <label style="font-size: 2rem; color:#52c6b5;" class="text">02.</label>
+                    <label style="font-size: 2rem; color:#CCD6F6" class="">About Me</label>
+                    <hr style="font-size: 2rem; color:#CCD6F6"" class=""></hr>
+                </div>
+
+                <div class="col-3 p-2" style="background-color: #1d4753;" class="col-3 mt-5 p-2 text-white">
+
+                    <div class="row">
+                        <div class="col-12 w-100">
+                            <img id="tocolor" src="{% static 'img/inaki_retegi_eus.jpg' %}" class="img-fluid w-100 tocolor">
+                        </div>
+                        <div class="col-12 p-3">
+                            <h1 style="color:#52c6b5; font-size: 1.8rem;">Información General</h1>
+                            <ul style="color:#52c6b5">
+                                <li>Iñaki Retegi</li>
+                                Oiartzun, Gipuzkoa
+                                <li>info@retegi.eus</li>
+                                <li>+34 635726721</li>
+                                <li>www.retegi.eus</li><br>
+                                <div class="text-center">
+                                    <a href="#" class="fa fa-linkedin m-2 p-2"></a><br>
+                                    <a target="_blank" href="https://github.com/retegi" ><img src="{% static 'img/github.png' %}" class="fa fa-github m-2 p-1"></a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                </div>
+        
+                <div style="background-color: #112240;" class="col-9 mt-5 p-5">
+                    <h3 style="color:#CCD6F6">Python & Django Developer</h3>
+                    <h1 style="font-size: 500%;color:#52c6b5" class="">Iñaki Retegi</h1>
+                    <br>
+                    <p style="color:#CCD6F6">
+                        Aprender y descubrir nuevas tecnologías relacionadas con la programación y la robótica es una placer y un privilegio para mi, por eso todos los días dedico tiempo al aprendizaje. Comencé en el mundo web descubriendo Joomla y otros CMS y Ecommerce como: Wordpress, Drupal, WooCommerce o Prestashop. Con el tiempo descubrí, por su creatividad: el placer de la PROGRAMACIÓN, al igual que el piano y el jazz (otras de mis pasiones). Conocí PHP y SQL gracias a Ignacio Usabiaga (SEIM, Donostia). Creé los primeros proyectos en PHP. Descubrí PYTHON de la manos de Carlos Naucler (Ceinpro, Donosti). La ventana hacia los FRAMEWORK y el desarrollo profesional me lo abrió Carlos Ortega (Cebanc, Donosti): "Desarrollo con código límpio". El lenguaje con el que más cómodo trabajo es PYTHON por su limpieza y funcionalidad en ámbitos como WEBy Robótica, por eso tenía claro que quería dominar su Framework: DJANGO. Es con el que creo proyectos actualmente y quiero mejorar día a día. Este framework me permite crear proyectos con un código seguro, límpio, organizado y escalable. Por eso los proyectos que creo son 100% Django(Python), combinado con otras tecnologías como Javascript, SQL, HTML y CSS.
+                    </p></br>
+                    <p style="color:#52c6b5">Tecnologías:<br>Django, Laravel, Python, Javascript, Sql, Php, C, Java, Html, Css, Bootstrap, Git, Xml, Json, PgAdmin, Linux, Oracle, SqlServer, PhpMyAdmin, PostgreSQL, SQLite, Photoshop, Illustrator, Tia Portal, CxProgrammer, NodeRed, Arduino, Raspberry Pi, PLC Siemens S7, etc.</p>
+        
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="col-3 mt-5 mb-5 p-5">
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block outbody %}
+{% endblock %}

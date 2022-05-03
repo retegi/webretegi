@@ -33,7 +33,7 @@ SECRET_KEY = SECRET_KEY = "get_secret('SECRET_KEY')"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','159.223.234.172','*','retegi.eus','www.retegi.eus']
+ALLOWED_HOSTS = ['localhost','159.223.234.172','*','retegi.eus','www.retegi.eus','*']
 
 
 # Application definition
@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'webretegi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}"""
 
 with open("secret.json") as f:
     secret = json.loads(f.read())
@@ -103,7 +103,7 @@ def get_secret(secret_name, secrets=secret):
 
 SECRET_KEY = get_secret('SECRET_KEY')
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': get_secret('DB_NAME'),
@@ -112,7 +112,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
         'HOST': 'localhost',
         'PORT': '5432',
     }
-}"""
+}
 
 
 # Password validation

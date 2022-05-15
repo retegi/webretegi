@@ -32,13 +32,13 @@ crossorigin=""/>
     
     <div class="row">
 
-        <div class="col-1 mt-5 mb-3" style="background-color:;" src="">
+        <div class="col-md-1 col-sm-0 mt-5 mb-3" style="background-color:;" src="">
         </div>
 
-        <div class="col-7 mt-5 mb-3">
+        <div class="col-md-7 col-sm-12 mt-5 mb-3">
             <h1 style="font-size: 4rem" class="mt-5">{{ post.title }}</h1>
             <a style="text-decoration:none;color:black" href="{% url 'home:blog' %}"><b>blog</b></a><br>
-            <label class="mt-2">Actualizado: <b>{{ post.datetime|date:'d-m-Y' }}</b></label>    <label style="margin-left: 50px">Autor: <b>{{ post.author }}</b></label>    <label style="margin-left: 50px">Tiempo estimado:<b>{{ post.readingTime }}min</b></label>
+            <label class="mt-2">Actualizado: <b>{{ post.datetime|date:'d-m-Y' }}</b></label><br><label>Autor: <b>{{ post.author }}</b></label><br><label>Tiempo estimado:<b> {{ post.readingTime }}min</b></label>
             <img class="w-100 mt-3" src="/media/{{ post.image }}">
             
             <p class="mt-4">{{ post.text|safe }}</p>
@@ -47,7 +47,7 @@ crossorigin=""/>
            
         </div>
 
-        <div class="col-3 mt-5 mb-3" style="background-color:;" src="">
+        <div class="col-md-3 col-sm-0 mt-5 mb-3" style="background-color:;" src="">
             <h1 style="font-size: 2rem" class="mt-5">Tabla de contenidos</h1>
             <hr></hr>
             {% for post in PostsTodos %}
@@ -56,7 +56,7 @@ crossorigin=""/>
 
         </div>
 
-        <div class="col-1 mt-5 mb-3 text-center" style="background-color:;" src="">
+        <div class="col-md-1 col-sm-0 mt-5 mb-3 text-center" style="background-color:;" src="">
             
             
         </div>

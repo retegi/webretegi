@@ -89,19 +89,19 @@ crossorigin=""/>
 
         
 
-        <div class="col-lg-3 col-md-3 mt-3 mb-3" style="background-color:;" src="">
+        <div class="col-lg-3 col-md-3 col-sm-0 mt-3 mb-3" style="background-color:;" src="">
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 mt-3 mb-3" style="background-color:;" src="">
             <div class="row">
                
-                <div class="col-12 text-left mt-5 mb-1">
+                <div class="col-md-12 text-left mt-5 mb-1">
                     <label style="font-size: 2rem; color:#52c6b5;" class="text">01.</label>
                     <label style="font-size: 2rem;" class="">Blog</label>
                     <hr style="font-size: 2rem;" class=""></hr>
                 </div>
                 {% for post in posts %}
-                <div class="col-4 mt-5 mb-5">
+                <div class="col-md-4 col-sm-12 mt-5 mb-5">
 
                     <div style="min-height: 200px;" class="">
                         <a style="color:black; text-decoration: none;" href="{% url 'home:detail_post' post.id %}">
@@ -139,7 +139,7 @@ crossorigin=""/>
             
             </div>
 
-        <div class="col-lg-3 col-md-3 mt-3 mb-3" style="background-color:; padding-left: 5%;" src="">
+        <div class="col-lg-3 col-md-3 col-sm-0 mt-3 mb-3" style="background-color:; padding-left: 5%;" src="">
             <br><br><br><h1 class="mt-5">TAGs</h1>
             {% for label in labels %}
                 <h5 style="color:#52c6b5;" class="">{{ label.name }}</h3>
@@ -157,18 +157,18 @@ crossorigin=""/>
 {% block bio %}
 <div class="container-fluid">
     <div class="row m-2">
-        <div class="col-md-3 mt-5 mb-5"></div>
+        <div class="col-md-3 col-sm-0 mt-5 mb-5"></div>
 
-        <div class="col-md-6 mt-3 mb-5">
+        <div class="col-md-6 col-sm-12 mt-3 mb-5">
             <div class="row">
 
-                <div class="col-12 text-left mt-5 mb-5">
+                <div class="col-md-12 col-sm-12 text-left mt-5 mb-5">
                     <label style="font-size: 2rem; color:#52c6b5;" class="text">02.</label>
                     <label style="font-size: 2rem; color:#CCD6F6" class="">About Me</label>
                     <hr style="font-size: 2rem; color:#CCD6F6"" class=""></hr>
                 </div>
 
-                <div class="col-3 p-2" style="background-color: #1d4753;" class="col-3 mt-5 p-2 text-white">
+                <div class="col-lg-3 col-md-12 p-2" style="background-color: #1d4753;" class="col-3 mt-5 p-2 text-white">
 
                     <div class="row">
                         <div class="col-12 w-100">
@@ -192,7 +192,7 @@ crossorigin=""/>
                    
                 </div>
         
-                <div style="background-color: #112240;" class="col-9 mt-5 p-5">
+                <div class="col-lg-8 col-md-12 p-3" style="background-color: #112240;" class="col-9 mt-5 p-5">
                     <h3 style="color:#CCD6F6">Python & Django Developer</h3>
                     <h1 style="font-size: 500%;color:#52c6b5" class="">Iñaki Retegi</h1>
                     <br>
@@ -210,7 +210,7 @@ crossorigin=""/>
 
         
 
-        <div class="col-md-3 mt-5 mb-5 p-5">
+        <div class="col-md-3 col-sm-0 mt-5 mb-5 p-5">
         </div>
 
     </div>
@@ -226,7 +226,7 @@ crossorigin=""/>
 
         
 
-        <div class="col-3 mt-3 mb-3" style="background-color:;" src="">
+        <div class="col-md-4 col-sm-12 mt-3 mb-3" style="background-color:;" src="">
         </div>
 
         <div class="col-6 mt-3 mb-3" style="background-color:;" src="">

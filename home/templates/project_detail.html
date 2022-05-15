@@ -41,7 +41,7 @@ crossorigin=""/>
             <!--<label class="mt-2">Actualizado: <b>{{ project.datetime|date:'d-m-Y' }}</b></label>    <label style="margin-left: 50px">Autor: <b>{{ project.author }}</b></label>    <label style="margin-left: 50px">Tiempo estimado:<b>{{ project.readingTime }}min</b></label>-->
             <img class="w-100 mt-3" src="/media/{{ project.image }}">
             
-            <p class="mt-4">{{ project.text }}</p>
+            <p class="mt-4">{{ project.text|safe }}</p>
             <!--<label class="mt-2 text-right">Actualizado: <b>{{ project.datetime|date:'d-m-Y' }}</b></label>-->
             
            
